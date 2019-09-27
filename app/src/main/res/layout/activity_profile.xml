@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="139dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="02dp"
+        android:text="Log-Out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="183dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/country"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="15dp"
+        android:ems="10"
+        android:inputType="textAutoComplete|textAutoCorrect"
+        android:imeOptions="actionSearch"
+        android:hint="Country"
+        android:completionThreshold="1"
+
+        />
+
+    <AutoCompleteTextView
+        android:id="@+id/state"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="65dp"
+        android:inputType="textAutoComplete|textAutoCorrect"
+        android:imeOptions="actionSearch"
+        android:hint="State"
+        android:completionThreshold="1"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/city"
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="65dp"
+        android:inputType="textAutoComplete|textAutoCorrect"
+        android:imeOptions="actionSearch"
+        android:hint="City"
+        android:completionThreshold="1"/>
+
+    <Button
+        android:id="@+id/submit_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Submit" />
+</LinearLayout>
