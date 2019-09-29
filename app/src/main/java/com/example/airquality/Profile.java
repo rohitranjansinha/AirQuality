@@ -263,6 +263,37 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+
+        //submit Button
+        submit_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    String desh = country.getText().toString();
+                    String rajya = state.getText().toString();
+                    String seher = city.getText().toString();
+                    if(desh.equals("")){
+                        country.setError("Select a country");
+                        country.requestFocus();
+                        return;
+                    }
+                    if(rajya.equals("")){
+                        state.setError("Select a state");
+                        state.requestFocus();
+                        return;
+                    }
+                    if(seher.equals("")){
+                        city.setError("Select a city");
+                        city.requestFocus();
+                        return;
+                    }
+                    Intent final_intent = new Intent(getApplicationContext(),Final.class);
+                    final_intent.putExtra("country",desh);
+                    final_intent.putExtra("state",rajya);
+                    final_intent.putExtra("city",seher);
+                    startActivity(final_intent);
+            }
+        });
+
     }
 
     public void logoutPress(){
